@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            background: url('pic/blackbg.jpg');
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            font-family: cursive;
+            opacity: .8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* Contact Us heading css */
+        .MainHeading {
+            text-align: center;
+            margin-right: 67px;
+            padding: 30px;
+            background-color: transparent;
+            color: rgb(236, 223, 223);
+            font-size: 4.5rem;
+            font-family: cursive;
+            letter-spacing: 0.1em;
+
+        }
+
+        /* input box property */
+        .box {
+            width: 600px;
+            height: 600px;
+            background-color: transparent;
+            opacity: 0.75;
+            margin-top: 40px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 8px;
+        }
+
+        .box form {
+            backdrop-filter: blur(100%);
+        }
+
+        div {
+            color: white;
+            margin: 0 30px;
+        }
+
+        .form-input {
+            margin: 10px;
+        }
+
+        /* Input Name Property */
+        .myname {
+            width: 70%;
+            margin: 10px 35px;
+            padding: 10px 10px;
+            background: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid white;
+            color: #fff;
+            transition: all 2ms ease-in;
+
+        }
+
+        /* Input after hover Property */
+        .myname:hover,
+        #mysub:hover,
+        input[type="email"]:hover,
+        textarea:hover {
+            font-size: 15px;
+            background-color: rgb(35, 35, 35);
+
+        }
+
+        /* Input Subject Property */
+        #mysub {
+            width: 70%;
+            margin: 10px 35px;
+            padding: 10px 10px;
+            background: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid white;
+            color: #fff;
+            transition: all 2ms ease-in;
+        }
+
+        /* Input Email Property */
+        input[type="email"] {
+            width: 70%;
+            padding: 10px 10px;
+            background: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid white;
+            margin: 10px 35px;
+            color: #fff;
+            transition: all 2ms ease-in;
+
+        }
+
+        /* Textarea message property */
+        textarea {
+            width: 70%;
+            margin: 10px 35px;
+            padding: 10px 10px;
+            outline: none;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            color: #fff;
+            transition: all 2ms ease-in;
+        }
+
+        /* button Property */
+        #btn {
+            width: 63%;
+            padding: 10px 10px;
+            position: relative;
+            left: 63px;
+            padding: 10px 35px;
+            background-color: transparent;
+            border: 2px solid white;
+            outline: none;
+            transition: .6s ease;
+            color: white;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        /* After hover button property */
+        #btn:hover {
+            cursor: pointer;
+            background-color: rgba(240, 248, 255, 0.227);
+            box-shadow: 0 0 5px white;
+            font-weight: bolder;
+        }
+
+        /* Set the media query for the Phone ,Tablet, medium screen and desktop property  */
+        @media screen and (max-width:500px) {
+            .box {
+                position: relative;
+                left: 30px;
+                margin-top: 0;
+            }
+
+            .MainHeading {
+                font-size: 2rem;
+            }
+
+        }
+
+        @media screen and (min-width:500px) and (max-width:800px) {
+            .box {
+                position: relative;
+                left: 30px;
+                margin-top: 0;
+            }
+
+            .MainHeading {
+                font-size: 3rem;
+            }
+
+        }
+
+        @media screen and (min-width:800px) and (max-width:1200px) {
+            .box {
+                position: relative;
+                left: 230px;
+            }
+
+            .MainHeading {
+                font-size: 3rem;
+            }
+
+
+        }
+
+        @media screen and (min-width:1200px) {
+            .box {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            .MainHeading {
+                font-size: 4.5rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <form action="">
+
+            <h1 class="MainHeading"> Contact Us</h1>
+
+            <div class="inputbox">
+                <div>Name:</div>
+                <input type="text" class="myname" name="Full Name">
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <div>Email:</div>
+                <input type="email" class="form-input" name="Email" required="required">
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <div>Message:</div>
+                <textarea class="span" name="message" id="" cols="3" rows="5"></textarea>
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <div>Subject:</div>
+                <input id="mysub" type="text" name="Subject">
+                <i></i>
+            </div>
+
+            <input id="btn" type="button" name="Send Message" value="Send Message">
+        </form>
+    </div>
+    </div>
+
+</body>
+
+</html>
